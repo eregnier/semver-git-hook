@@ -1,0 +1,2 @@
+Semver Git Hook
+===============
