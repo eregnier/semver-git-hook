@@ -4,11 +4,12 @@ from os import path
 cd = path.abspath(path.dirname(__file__))
 with open(path.join(cd, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
-
+with open(path.join(cd, ".version"), encoding="utf-8") as f:
+    version = f.read.strip()
 
 setup(
     name="semver-git-hook",
-    version="0.0.1",
+    version=version,
     py_files=["semver_git_hook.py"],
     description="Enforce semver management in git repositories",
     long_description_content_type="text/markdown",
