@@ -21,15 +21,15 @@ semver-git-hook --init
 
 That is all. Now on commit a release version type is asked interactively.
 
-![Prompt wich is new version for package on commit](sample-command.jpg)
+![Prompt wich is new version for package on commit](https://raw.githubusercontent.com/eregnier/semver-git-hook/master/sample-command.jpg)
 
-![Interactively select new version](sample-update.jpg)
+![Interactively select new version](https://raw.githubusercontent.com/eregnier/semver-git-hook/master/sample-update.jpg)
 
-On commit some version change will be saved in a .version file. It is automatically added to the current commit.
+On commit some version change will be saved in a **.version** file. It is automatically added to the current commit.
 
 With this enabled you have your project version set in the `.version` file that it is possible to dynamically load to your dev environment versionning settings.
 
-For exemple in ptyhon the `setup.py` can look like
+For exemple in python the `setup.py` can look like
 
 ```python
 # setup.py
@@ -55,3 +55,6 @@ package.version = version
 f.writeFileSync('package.json', JSON.stringify(package, null, 4))
 ```
 
+## Options
+
+It is possible to change ``.version`` file location by setting a prefix in it's path. The file will be located at `SEMVER_HOOK_PATH_PREFIX.version` where `SEMVER_HOOK_PATH_PREFIX` is an environment variable.
