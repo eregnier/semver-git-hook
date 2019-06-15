@@ -7,7 +7,7 @@ pip install --user  semver-git-hook
 then edit the `.git/hooks/pre-commit file`
 
 ```bash
-exec < /dev/tty
+exec < /dev/tty # Enable keyboard input to work in pre-commit hook command context
 semver-git-hook
 ```
 

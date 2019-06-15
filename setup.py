@@ -5,7 +5,7 @@ cd = path.abspath(path.dirname(__file__))
 with open(path.join(cd, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 with open(path.join(cd, ".version"), encoding="utf-8") as f:
-    version = f.read.strip()
+    version = f.read().strip()
 
 setup(
     name="semver-git-hook",
