@@ -16,4 +16,4 @@ clean:
 	find -name *.pyc -delete
 	@- git status
 
-deploy: push clean
+deploy: clean push clean
