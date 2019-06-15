@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from os import path
 
 cd = path.abspath(path.dirname(__file__))
@@ -10,7 +10,7 @@ with open(path.join(cd, ".version"), encoding="utf-8") as f:
 setup(
     name="semver-git-hook",
     version=version,
-    py_files=["semver_git_hook.py"],
+    packages=find_packages(),
     description="Enforce semver management in git repositories",
     long_description_content_type="text/markdown",
     long_description=long_description,
